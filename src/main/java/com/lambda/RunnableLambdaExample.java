@@ -1,6 +1,6 @@
 package com.lambda;
 
-public class RunnableTry {
+public class RunnableLambdaExample {
 
     public static void main(String[] args) {
 
