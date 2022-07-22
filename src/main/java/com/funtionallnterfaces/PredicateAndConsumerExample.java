@@ -19,7 +19,10 @@ public class PredicateAndConsumerExample {
     BiConsumer<String, List<String>> studentBiConsumer = (name,activities) -> System.out.println(name + " : " + activities);;
 
     Consumer<Student> studentConsumer = (student -> {
-        if(p1.and(p2).test(student)){
+//        if(p1.and(p2).test(student)){
+//            studentBiConsumer.accept(student.getName(), student.getActivities());
+//        }
+        if(biPredicate.test(student.getGradeLevel(), student.getGpa())){
             studentBiConsumer.accept(student.getName(), student.getActivities());
         }
     });
