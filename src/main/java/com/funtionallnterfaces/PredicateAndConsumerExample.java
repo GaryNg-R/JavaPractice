@@ -22,6 +22,7 @@ public class PredicateAndConsumerExample {
 //        if(p1.and(p2).test(student)){
 //            studentBiConsumer.accept(student.getName(), student.getActivities());
 //        }
+        //using biPredicate
         if(biPredicate.test(student.getGradeLevel(), student.getGpa())){
             studentBiConsumer.accept(student.getName(), student.getActivities());
         }
