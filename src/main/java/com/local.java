@@ -29,8 +29,10 @@ public class local {
     }
 
     public static void main(String[] args) {
-        List<String> grid = List.of(new String[]{"eabcd", "fghij", "olkmn", "trpqs", "xywuv"});
-        System.out.println(gridChallenge(grid));
+//        List<String> grid = List.of(new String[]{"eabcd", "fghij", "olkmn", "trpqs", "xywuv"});
+//        System.out.println(gridChallenge(grid));
+
+        System.out.println(7%3);
     }
 }
 
