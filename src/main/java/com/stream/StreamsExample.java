@@ -24,8 +24,14 @@ public class StreamsExample {
 //                .collect(Collectors.toMap(Student::getName, Student::getActivities));
 
         Map<String, List<String>> studentMap =  StudentDataBase.getAllStudents().parallelStream()
+                .peek(student -> {
+                    System.out.println(student);
+                })
                 .filter(studentPredicate)
                 .filter(studentGpaPredicate)
+                .peek(student -> {
+                    System.out.println("after two filer "+ student);
+                })
                 .filter(studentActivities)
                 .collect(Collectors.toMap(Student::getName, Student::getActivities));
 

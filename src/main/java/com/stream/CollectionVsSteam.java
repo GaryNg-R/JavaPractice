@@ -25,7 +25,7 @@ public class CollectionVsSteam {
         //collection to traversed loop  and print but you can only run one time and it will close the stream
         Stream<String> nameStream = names.stream();
         nameStream.forEach(System.out::println);
-
+        //it will fail to run again nameStream.forEach(System.out::println);
 
     }
 }
