@@ -18,7 +18,8 @@ public class SteamsFlatMapExample {
         return studentAcitvities;
     }
     public static void main(String[] args) {
-        System.out.println("printStudentActivities "  + printStudentActivities());
+        public static void main(String[] args) {
+        System.out.println(" printStudentActivities "  + printStudentActivities());
 
     }
 }
