@@ -15,6 +15,7 @@ public class SteamsFlatMapExample {
                 .flatMap(List::stream)   //Stream<String>
                 .collect(Collectors.toList());
 
+
         return studentAcitvities;
     }
     public static void main(String[] args) {
