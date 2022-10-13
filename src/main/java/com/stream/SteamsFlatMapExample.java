@@ -31,11 +31,23 @@ public class SteamsFlatMapExample {
         return studentAcitvities;
     }
 
+    public static long getStudentActivitiesCount(){
+        long noOfStudentAcitvities = StudentDataBase.getAllStudents().stream() //Steam<Student>
+                .map(Student::getActivities)   //Stream<List<String>>
+                //using flatMap to change Stream<List<String>> to Stream<String>
+                .flatMap(List::stream)   //Stream<String>
+                .distinct() //Stream<String> -> with disinct function performed
+                .count();
+
+
+        return noOfStudentAcitvities;
+    }
 
 
     public static void main(String[] args) {
         System.out.println("printStudentActivities "   + printStudentActivities());
         System.out.println("printUniqueStudentActivities "   + printUniqueStudentActivities());
+        System.out.println("StudentActivities count"   + getStudentActivitiesCount());
 
     }
 }
