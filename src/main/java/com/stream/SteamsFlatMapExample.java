@@ -18,8 +18,24 @@ public class SteamsFlatMapExample {
 
         return studentAcitvities;
     }
+
+    public static List<String> printUniqueStudentActivities(){
+        List<String> studentAcitvities = StudentDataBase.getAllStudents().stream() //Steam<Student>
+                .map(Student::getActivities)   //Stream<List<String>>
+                //using flatMap to change Stream<List<String>> to Stream<String>
+                .flatMap(List::stream)   //Stream<String>
+                .distinct()
+                .collect(Collectors.toList());
+
+
+        return studentAcitvities;
+    }
+
+
+
     public static void main(String[] args) {
         System.out.println("printStudentActivities "   + printStudentActivities());
+        System.out.println("printUniqueStudentActivities "   + printUniqueStudentActivities());
 
     }
 }
