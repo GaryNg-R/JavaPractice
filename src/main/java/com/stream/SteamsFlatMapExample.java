@@ -39,8 +39,6 @@ public class SteamsFlatMapExample {
                 .flatMap(List::stream)   //Stream<String>
                 .distinct() //Stream<String> -> with disinct function performed
                 .count();
-
-
         return noOfStudentAcitvities;
     }
 
