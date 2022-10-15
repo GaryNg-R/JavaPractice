@@ -25,6 +25,7 @@ public class SteamsFlatMapExample {
                 //using flatMap to change Stream<List<String>> to Stream<String>
                 .flatMap(List::stream)   //Stream<String>
                 .distinct()
+                .sorted()git
                 .collect(Collectors.toList());
 
 
