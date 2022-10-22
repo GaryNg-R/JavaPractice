@@ -13,6 +13,7 @@ public class StreamsFilterExample {
                 .filter((student -> student.getGender().equals("female") )) //Stream<Student> // filters and sends only the students whose gender is female
                .filter(student -> student.getGpa() >=3.9)
                .collect(Collectors.toList());
+
     }
 
     public static void main(String[] args) {
