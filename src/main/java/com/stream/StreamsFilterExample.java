@@ -17,7 +17,7 @@ public class StreamsFilterExample {
     }
 
     public static void main(String[] args) {
-        //System.out.println("filterStudents :" + filterStudents());
+        System.out.println("filterStudents :" + filterStudents());
         filterStudents().forEach(System.out::println);
     }
 }
