@@ -37,6 +37,7 @@ public class StreamReduceExample {
         System.out.println(result.isPresent());
         System.out.println(result.get());
 
+
         Optional<Integer> result1 = performMultiplicationWithoutIdentity(integers2);
         System.out.println(result1.isPresent());
     }
