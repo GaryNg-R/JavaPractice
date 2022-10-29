@@ -1,4 +1,7 @@
 package com.stream;
+import com.data.Student;
+import com.data.StudentDataBase;
+
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
@@ -25,6 +28,17 @@ public class StreamReduceExample {
                 //5
                 //7
                 .reduce( (a, b) -> a*b);
+    }
+
+    public static Optional<Student> getHigherGPAStudent(){
+        StudentDataBase.getAllStudents().stream()
+                .reduce((s1,s2) -> {
+                    if(s1.getGpa() > s2.getGpa()){
+                        return s1;
+                    }else{
+                        return s2;
+                    }
+                });
     }
 
     public static void main(String[] args) {
