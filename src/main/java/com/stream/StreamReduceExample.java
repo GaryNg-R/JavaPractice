@@ -31,14 +31,17 @@ public class StreamReduceExample {
     }
 
     public static Optional<Student> getHigherGPAStudent(){
-        StudentDataBase.getAllStudents().stream()
-                .reduce((s1,s2) -> {
-                    if(s1.getGpa() > s2.getGpa()){
-                        return s1;
-                    }else{
-                        return s2;
-                    }
-                });
+        return StudentDataBase.getAllStudents().stream()
+                .reduce((s1,s2) ->
+//                  {  if(s1.getGpa() > s2.getGpa()){
+//                        return s1;
+//                    }else{
+//                        return s2;
+//                    }}
+
+                    (s1.getGpa()>s2.getGpa()) ? s1: s2
+
+                );
     }
 
     public static void main(String[] args) {
@@ -54,5 +57,11 @@ public class StreamReduceExample {
 
         Optional<Integer> result1 = performMultiplicationWithoutIdentity(integers2);
         System.out.println(result1.isPresent());
+
+
+        Optional<Student> studentOptional = getHigherGPAStudent();
+    if(getHigherGPAStudent().isPresent()){
+        System.out.println(studentOptional);
+    }
     }
 }
