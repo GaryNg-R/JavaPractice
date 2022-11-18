@@ -11,6 +11,7 @@ public class StreamMapReduceExample {
                 .map(Student::getNoteBooks) //Stream<Integer>
                 //.reduce(0,(a,b) -> a+b);
                 .reduce(0,Integer::sum);
+
         return numOfNoteBooks;
     }
 
