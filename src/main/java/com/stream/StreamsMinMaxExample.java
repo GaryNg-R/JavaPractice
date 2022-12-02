@@ -43,6 +43,7 @@ public class StreamsMinMaxExample {
 
     public static Optional<Integer> findMinValueOptional(List<Integer> integerList){
         return integerList.stream()
+
                 //6 ->y
                 //7 ->y
                 //8
