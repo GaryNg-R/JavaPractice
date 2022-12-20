@@ -10,6 +10,6 @@ public class NumericStreamAggregatexample {
         System.out.println("Sum is " + sum);
 
         OptionalInt max =  IntStream.rangeClosed(1,50).max();
-        System.out.println("Max is " + max);
+        System.out.println("Max is " + (max.isPresent() ? max.getAsInt() : 0));
     }
 }
