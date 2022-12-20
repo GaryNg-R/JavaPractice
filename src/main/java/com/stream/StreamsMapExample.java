@@ -23,6 +23,7 @@ public class StreamsMapExample {
                 .map(Student::getName) //Stream<String>
                 .map(String::toUpperCase) //Stream<String> -> uppercase operation on each input
                 .collect(Collectors.toSet()); //Set<String>
+
     }
 
     public static void main(String[] args) {
