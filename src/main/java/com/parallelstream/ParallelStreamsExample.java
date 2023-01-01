@@ -25,6 +25,6 @@ public class ParallelStreamsExample {
     }
     public static void main(String[] args) {
         System.out.println("Sequential Stream Result : " + checkPerformanceResult(ParallelStreamsExample::sumSequentialStream,20));
-        System.out.println("Parallel Stream Result : " + checkPerformanceResult(ParallelStreamsExample::sumParallelStream,20));
+        System.out.println("Parallel Stream Result :  " + checkPerformanceResult(ParallelStreamsExample::sumParallelStream,20));
     }
 }
