@@ -1,5 +1,6 @@
 package com.optional;
 
+import com.data.Bike;
 import com.data.Student;
 import com.data.StudentDataBase;
 
@@ -27,10 +28,20 @@ public class OptionalMapExample {
     }
 
     //flatmap
+    public static void optionalFlatMap(){
+        Optional<Student> studentOptional = Optional.ofNullable(StudentDataBase.studentSupplier.get());
+        Optional<String> name = studentOptional
+                .filter(student -> student.getGpa() >=3.5)
+                .flatMap(Student::getBike)
+                .map(Bike::getName);
+
+        name.ifPresent(s -> System.out.println("name " + name));
+    }
 
 
     public static void main(String[] args) {
         optionalFilter();
         optionalMap();
+        optionalFlatMap();
     }
 }
